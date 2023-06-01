@@ -1,5 +1,5 @@
-# vagrant
-Creates VM with Ubuntu/Nginx
+# vagrant + Ansible
+Creates VM Ubuntu/Nginx with Vagrant + Ansible
 
 ## Note:
 
