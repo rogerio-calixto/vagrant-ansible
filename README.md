@@ -1,4 +1,4 @@
-# vagrant + Ansible
+# Vagrant + Ansible
 Creates VM Ubuntu/Nginx with Vagrant + Ansible
 
 ## Note:
