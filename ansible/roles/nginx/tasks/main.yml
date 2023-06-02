@@ -6,14 +6,10 @@
   apt:
     name: nginx
 
-- name: create directory
-  file: 
-    path: /website
-    state: directory
-
-- name: copy website folder
+- name: copy contents from website to /var/www/html
   copy:
-    src: "{{ item }}" 
-    dest: /var/www/html
-  with_fileglob:
-    - "files/html/*"
+    src: files/website/
+    dest: /var/www/html/
+    directory_mode:
+  tags:
+    - dircontent

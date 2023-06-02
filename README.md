@@ -1,5 +1,6 @@
 # Vagrant + Ansible
 Creates VM Ubuntu/Nginx with Vagrant + Ansible
+for development environment
 
 ## Note:
 

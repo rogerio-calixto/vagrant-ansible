@@ -1,0 +1,34 @@
+- name: update cache #apt update
+  apt:
+    update_cache: yes
+
+- name: update S.O.
+  apt:
+    name: "*"
+    state: latest
+
+- name: set hostname
+  ansible.builtin.hostname:
+    name: VA-Server
+
+- name: install packages
+  apt:
+    name:
+      - vim
+      - net-tools
+      - htop
+      - nmap
+      - wget
+      - curl
+      - telnet
+
+- name: add company user
+  user:
+    name: usr01
+    shell: /bin/bash
+    home: /home/usr01
+
+- name: add company user for sudoers
+  lineinfile:
+    dest: /etc/sudoers
+    line: "usr01 ALL=(ALL:ALL) NOPASSWD: ALL"
